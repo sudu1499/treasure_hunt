@@ -1,0 +1,107 @@
+*{
+    border:0;
+    margin:0;
+}
+nav{
+    background-color: rgb(126, 31, 31);
+    width:100wh;
+    height:60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 10px 10px black;
+}
+body{
+    background-image: linear-gradient(to right ,rgb(179, 255, 0),rgb(255, 0, 55));
+}
+nav h2,a{
+    color:white;
+    font-size:22px;
+    letter-spacing: 5px;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+nav ul{
+    display: flex;
+    width: 100%;
+}
+nav ul li{
+    list-style: none;
+    margin:auto;
+}
+nav .title:hover{
+    text-shadow: 5px  5px 10px rgb(248, 247, 247);   
+}
+
+.b1,.b2,.b3{
+    background-color: white;
+    width:30px;
+    height:3px;
+    margin:10px;
+}
+.burger{
+    position: absolute;
+    right:4px;
+    top:4px;
+    display: none;
+}
+.main{
+    width: 60%;
+    height: 80vh;
+    background-color:rgba(10,15,80,.3);
+    margin:20px auto;
+    font-size: 25px;
+    box-shadow: 0px 10px 10px black;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    color:white;
+    border-radius: 10px;
+}
+.main input,button,.l1{
+    margin-top:10px;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+.main button{
+    border-radius: 10px;
+    background-image: linear-gradient(to right top,rgb(248, 245, 59),rgb(241, 53, 53));
+    height: 40px;
+    box-shadow: 0 0 5px black;
+}
+@media screen and  (max-width:830px) {   
+
+    .burger{
+        display: inline;
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        align-items: flex-start;
+    }
+    nav .title{
+        margin:20px auto 10px 20px;
+    }
+    nav ul li{
+        margin:auto;
+    }
+    nav ul{
+        flex-direction: column;
+        align-items:flex-start;
+    }
+    .links{
+        display: none;
+    }
+    .active_links{
+        display:inline;
+    }
+    nav li{
+        height: 40px;
+        width:165%;
+        text-align: center;
+        }
+    .main{
+        width:90%;
+    }
+    }

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TREASURE HUNT</title>
+    <link rel="stylesheet" href='{{url_for("static",filename="home.css")}}'>
+</head>
+<body>
+    <nav>
+        <div class="title"><h2>TREASURE HUNT</h2></div>
+        <div class="links"><ul>
+            <li>
+                <a href="/">home</a>
+            </li>
+            <li>
+                <a href="#">solutions</a>
+            </li>
+            <li>
+                <a href="#">about</a>
+            </li>
+        </ul>
+        </div>
+        <div class="burger">
+            <div class="b1"></div>
+            <div class="b2"></div>
+            <div class="b3"></div>
+        </div>
+    </nav>
+
+    <div class="main">
+        <form action="question1" method="POST">
+            <label class="l1" >Name</label>
+            <br>
+            <input type="text" placeholder="ur name" required name="name">
+            <br>
+            <button>Hunt The Treasure</button>
+        </form>
+    </div>
+    <script src='{{url_for("static",filename="home.js")}}'></script>
+</body>
+</html>

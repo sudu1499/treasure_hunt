@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions</title>
+    <link rel="stylesheet" href='{{url_for("static",filename="question2.css")}}'>
+</head>
+<body>
+    <nav>
+        <div class="title"><h2>TREASURE HUNT</h2></div>
+        <div class="links"><ul>
+            <li>
+                <a href="/">home</a>
+            </li>
+            <li>
+                <a href="#">solutions</a>
+            </li>
+            <li>
+                <a href="#">about</a>
+            </li>
+        </ul>
+        </div>
+        <div class="burger">
+            <div class="b1"></div>
+            <div class="b2"></div>
+            <div class="b3"></div>
+        </div>
+    </nav>
+    <div class="maindiv">
+        <div class="g"><h2>Time Left: </h2><h2 id="d">30</h2><h2>s</h2></div>
+        <form action="result" method="POST">
+            <label>1.{{t[5][0]}}</label><br>
+            <div class="op">
+                <div class="subdiv"><input type="radio" name="q1" value="a" id="op11" required><label for="op11" class="qq1">{{t[5][1]}}</label></div>
+                <div class="subdiv"><input type="radio" name="q1" value="b" id="op12" required><label for="op12" class="qq1">{{t[5][2]}}</label></div>
+                <div class="subdiv"><input type="radio" name="q1" value="c" id="op13" required><label for="op13" class="qq1">{{t[5][3]}}</label></div>
+                <div class="subdiv"><input type="radio" name="q1" value="d" id="op14" required><label for="op14" class="qq1">{{t[5][4]}}</label></div>
+            </div>
+            <br>
+            <label>2.{{t[6][0]}}</label><br>
+            <div class="op">
+                <div class="subdiv"><input type="radio" name="q2" value="a" id="op21" required><label for="op21" class="qq1">{{t[6][1]}}</label></div>
+                <div class="subdiv"><input type="radio" name="q2" value="b" id="op22" required><label for="op22" class="qq1">{{t[6][2]}}</label></div>
+                <div class="subdiv"><input type="radio" name="q2" value="c" id="op23" required><label for="op23" class="qq1">{{t[6][3]}}</label></div>
+                <div class="subdiv"><input type="radio" name="q2" value="d" id="op24" required><label for="op24" class="qq1">{{t[6][4]}}</label></div>
+            </div>
+            <br>
+            <label>3.{{t[7][0]}}</label><br>
+            <div class="op">
+                <div class="subdiv"><input type="radio" name="q3" value="a" id="op31" required><label for="op31" class="qq1">{{t[7][1]}}</label></div>
+                <div class="subdiv"><input type="radio" name="q3" value="b" id="op32" required><label for="op32" class="qq1">{{t[7][2]}}</label></div>
+                <div class="subdiv"><input type="radio" name="q3" value="c" id="op33" required><label for="op33" class="qq1">{{t[7][3]}}</label></div>
+                <div class="subdiv"><input type="radio" name="q3" value="d" id="op34" required><label for="op34" class="qq1">{{t[7][4]}}</label></div>
+            </div>
+            <br>
+            <label>4.{{t[8][0]}}</label><br>
+            <div class="op">
+                <div class="subdiv"><input type="radio" name="q4" value="a" id="op41" required><label for="op41" class="qq1">{{t[8][1]}}</label></div>
+                <div class="subdiv"><input type="radio" name="q4" value="b" id="op42" required><label for="op42" class="qq1">{{t[8][2]}}</label></div>
+                <div class="subdiv"><input type="radio" name="q4" value="c" id="op43" required><label for="op43" class="qq1">{{t[8][3]}}</label></div>
+                <div class="subdiv"><input type="radio" name="q4" value="d" id="op44" required><label for="op44" class="qq1">{{t[8][4]}}</label></div>
+            </div>
+            <br>
+            <label>5.{{t[9][0]}}</label><br>
+            <div class="op">
+                <div class="subdiv"><input type="radio" name="q5" value="a" id="op51" required><label for="op51" class="qq1">{{t[9][1]}}</label></div>
+                <div class="subdiv"><input type="radio" name="q5" value="b" id="op52" required><label for="op52" class="qq1">{{t[9][2]}}</label></div>
+                <div class="subdiv"><input type="radio" name="q5" value="c" id="op53" required><label for="op53" class="qq1">{{t[9][3]}}</label></div>
+                <div class="subdiv"><input type="radio" name="q5" value="d" id="op54" required><label for="op54" class="qq1">{{t[9][4]}}</label></div>
+            </div>
+            <button>submit</button>
+        </form>
+    </div>
+    <script src='{{url_for("static",filename="question2.js")}}'></script>
+    <script>
+        d=document.getElementById('d')
+        setInterval(()=>{
+            if(d.innerHTML>0){
+                d.innerHTML-=1
+            }
+            else{
+               window.location.href='timeout'
+            }
+        },1000)
+    </script>
+</body>
+</html>
