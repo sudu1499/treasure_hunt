@@ -44,6 +44,8 @@ def result():
     if request.method=='POST':
         if session['a5']==request.form.get('q1') and session['a6']==request.form.get('q2') and session['a7']==request.form.get('q3') and session['a8']==request.form.get('q4') and session['a9']==request.form.get('q5'):
             return render_template('hurray.html')
+        else:
+            return render_template('sorry.html',t=f"Sorry {session['name']} you have not cleared Round 2")
 @app.route('/timeout',methods=['POST','GET'])
 def timeout():
     if request.method=='POST':
